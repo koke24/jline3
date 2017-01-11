@@ -466,9 +466,7 @@ public class Display {
                 c0 = 0;
             }
         }
-        if (c0 != 0 && c1 == 0) {
-            terminal.puts(Capability.carriage_return);
-        } else if (c0 < c1) {
+        if (c0 < c1) {
             perform(Capability.cursor_right, Capability.parm_right_cursor, c1 - c0);
         } else if (c0 > c1) {
             perform(Capability.cursor_left, Capability.parm_left_cursor, c0 - c1);
